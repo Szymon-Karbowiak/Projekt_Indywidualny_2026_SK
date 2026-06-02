@@ -13,7 +13,7 @@ aby uruchomić te programy należy:<br>
 </ul>
 <li>dla kodu MatLab:</li>
 <ul>
-<li>W wbudowanym w program MatLab terminalu wpisać komendę "eigen(load("RodzajLiczba.txt"))".</li>
+<li>W wbudowanym w program MatLab terminalu wpisać komendę "Program(load("RodzajLiczba.txt"))".</li>
 </ul>
 </ul>
 </p>
