@@ -19,7 +19,7 @@ for i = 1:n
     end
 end
     LT = L';
-    writematrix(L, 'L_mat_opt.txt');
-    writematrix(LT, 'LT_mat_opt.txt');
+    writematrix(L, 'L_mat.txt');
+    writematrix(LT, 'LT_mat.txt');
 t=toc;
 end
