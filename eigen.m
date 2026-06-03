@@ -5,8 +5,6 @@ n=length(A);
 V=eye(n);
 %metoda QR:
 for i=1:50
-    sigma=A(n,n);
-    A=A-sigma*eye(n);
     Q=A;
     R=zeros(n);
     for j=1:n
@@ -15,7 +13,7 @@ for i=1:50
         R(j,j+1:n)=Q(:,j)'*Q(:,j+1:n);
         Q(:,j+1:n)=Q(:,j+1:n)-Q(:,j)*R(j,j+1:n);
     end
-    A=R*Q+sigma*eye(n);
+    A=R*Q;
     V=V*Q;
     if (max(max(abs(tril(A,-1))))<d)
         fprintf("osiagnieto zbieznosc po %d iteracjach.",i)
@@ -46,7 +44,11 @@ for j=1:n
 end
 V=V*Y;
 VR=V';
+D=zeros(n);
+for i=1:n
+    D(i,i)=A(i,i);
+end
 writematrix(VR,"EVR_m.txt")
-writematrix(diag(A),"D_m.txt")
+writematrix(D,"D_m.txt")
 writematrix(V,"EV_m.txt")
 t=toc;
