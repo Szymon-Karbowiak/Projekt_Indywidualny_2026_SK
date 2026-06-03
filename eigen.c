@@ -28,7 +28,7 @@ void write_to_file(const char *filename, double *A, int n) {
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            fprintf(file, "%9.5f", A[i*n+j]);
+            fprintf(file, "%3.15f", A[i*n+j]);
             if (j < n - 1) {
                 fprintf(file, ",");
             }

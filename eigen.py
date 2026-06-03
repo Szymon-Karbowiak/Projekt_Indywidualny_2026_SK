@@ -64,7 +64,7 @@ def schur_to_eigenvectors(E,EV):
     return EV@Y
 
 def save_matrix(filename, matrix):
-    np.savetxt(filename,matrix,fmt="%9.5f",delimiter=",")
+    np.savetxt(filename,matrix,fmt="%3.15f",delimiter=",")
     print(f"Zapisano macierz do pliku: {filename}")
 
 def main():
